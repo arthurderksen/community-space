@@ -1,0 +1,37 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    background-color: ivory;
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+#timeline{
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 1;
+    border-radius: 30px;
+    font-size: 24px;
+    border-style: solid;
+    padding: 10px;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+#timeline:active{
+    background-color: aquamarine;
+}
