@@ -33,10 +33,10 @@ gltfLoader.load(
     (gltf) =>
     {
         gltf.scene.scale.set(0.25, 0.25, 0.25)
-        gltf.scene.position.set(0,0.5,0)
+        gltf.scene.position.set(0,1,0)
         scene.add(gltf.scene)
 
-       
+
     }
 )
 
@@ -58,19 +58,9 @@ gltfLoader.load(
 /**
  * Lights
  */
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.8)
-scene.add(ambientLight)
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6)
-directionalLight.castShadow = true
-directionalLight.shadow.mapSize.set(1024, 1024)
-directionalLight.shadow.camera.far = 15
-directionalLight.shadow.camera.left = - 7
-directionalLight.shadow.camera.top = 7
-directionalLight.shadow.camera.right = 7
-directionalLight.shadow.camera.bottom = - 7
-directionalLight.position.set(- 5, 5, 0)
-scene.add(directionalLight)
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.1)
+scene.add(ambientLight)
 
 /**
  * Sizes
@@ -99,13 +89,13 @@ window.addEventListener('resize', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(2, 2, 2)
+const camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 0.1, 100)
+camera.position.set(.5, 3, 3)
 scene.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
-controls.target.set(0, 0.75, 0)
+controls.target.set(0, .75, 0)
 controls.enableDamping = true
 
 /**

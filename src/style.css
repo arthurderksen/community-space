@@ -7,7 +7,7 @@
 html,
 body
 {
-    background-color: ivory;
+    background-color: white;
     overflow: hidden;
 }
 
@@ -19,19 +19,48 @@ body
     outline: none;
 }
 
-#timeline{
-    font-family: 'Times New Roman', Times, serif;
-    z-index: 1;
-    border-radius: 30px;
-    font-size: 24px;
-    border-style: solid;
-    padding: 10px;
-    background-color: aliceblue;
+.box
+{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin: 20px;
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    bottom: 0;
+    right: 0;
 }
 
-#timeline:active{
-    background-color: aquamarine;
+.info
+{
+    z-index: 1;
+    font-size:  24px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 35px;
+    border-style: solid;
+    line-height: 30px;
+    text-align: center;
+}
+
+#coordinates
+{
+    font-family: 'Space Mono', monospace;
+    font-style: italic;
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+#document
+{
+    padding-right: 12px;
+    padding-left: 12px;
+    font-family: 'Material Icons';
+}
+
+#document:hover
+{
+    background-color: lightgrey;
 }
